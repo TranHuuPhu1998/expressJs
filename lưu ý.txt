@@ -1,0 +1,4 @@
+methot get lấy giá trị trên thanh địa chỉ
+post gửi dữ liệu lên url
+params lấy id trên url
+xong bài 7 view user

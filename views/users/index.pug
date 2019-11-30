@@ -1,0 +1,24 @@
+extends ../layouts/common
+
+block content
+    h1 
+        span Users
+        a.btn.btn-primary(href="/users/create" class="ml-4") new
+      
+    .d-flex.algin-items-center
+      
+        form.ml-auto(action="/users/search" method="get" class="d-flex")
+            input(type="text" name="q" class="form-control ml-4")
+            button(class = "btn btn-primary ml-4") search
+
+    table.table
+        tr 
+            th Nam
+            th Phone
+            th Actions
+        each user in users
+            tr
+                td= user.name
+                td= user.phone
+                td 
+                    a.btn.btn-secondary(href="/users/" + user.id) View
